@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { InputBox } from "./components"
 import useCurrencyInfo from './hooks/useCurrencyInfo'
-let BackgroundImage = ''
+let BackgroundImage = 'https://i0.wp.com/worth.com/wp-content/uploads/2023/09/GraniteGroup_Q2_GettyImages-109343501.jpg?fit=1000%2C667&ssl=1'
 function App() {
 
   const [amount,setAmount] = useState(0)
@@ -23,6 +23,7 @@ function App() {
   const convert = ()=>{
   setConvertedAmount(amount*currencyInfo[to])
   }
+  
    
   
   return (
@@ -66,8 +67,7 @@ function App() {
                             currencyOptions={options}
                             onCurrencyChange={(currency) => setTo(currency)} 
                             selectCurrency={to}
-                            amountDisable
-                            
+                            amountDisable  
                         />
                     </div>
                     <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
